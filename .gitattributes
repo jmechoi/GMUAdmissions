@@ -16,4 +16,5 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-GMUAdmissionProject/GMUAdmissionProject/Scripts/* linguist-vendored
+* linguist-vendored
+*.cs linguist-vendored=false
