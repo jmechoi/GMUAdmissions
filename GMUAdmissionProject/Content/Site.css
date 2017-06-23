@@ -1,0 +1,286 @@
+﻿body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    background-color: #065143;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+
+/* ------------- GENERAL POSITIONING -------------- */
+.center {
+    margin: 0 auto;
+}
+
+.brd-left {
+    border-left: 1px solid #fff;
+}
+
+.brd-right {
+        border-right: 1px solid #fff;
+}
+
+.center-vert {
+    position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* ------------- NAVIGATION -------------- */
+a, a:visited, a:active {
+    color: #FFBA49;
+}
+
+a:hover {
+    color: #129490;
+    text-decoration:none;
+}
+
+.navbar{
+    background-color: #065143;
+    color: #fff;
+}
+
+.navbar-inverse {
+    border-color: #06493c;
+}
+.navbar-brand {
+    height: 100px;
+    padding-top: 50px;
+}
+
+a.navbar-brand {
+    padding: 5px;
+}
+
+.navbar-brand>img {
+  padding: 0 0 10px 0;
+  margin: 0px;
+  width: auto;
+  height: 100px;
+}
+
+.align-nav  {
+    margin-top:50px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #062c25;
+    border-radius: 50px;
+    
+}
+
+.navbar-nav > li > a{
+    margin:5px;
+    padding: 10px 20px;
+
+}
+
+#apply-link a {
+    background-color:#FFBA49;
+    border-radius: 50px;
+    color: #065143;
+}
+
+#apply-link a:hover {
+    background-color:#129490;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
+    background-color: #062c25;
+    border-radius: 50px;
+}
+
+.dropdown-menu {
+    background-color: #FFBA49;
+    color: #065143;
+}
+
+ul.dropdown-menu:hover, ul.dropdown-menu li a:hover {
+    background-color: #129490;
+    color: #fff;
+}
+/* ------------- JUMBOTRON -------------- */
+.jumbotron {
+    color: #fff;
+    margin-bottom: 0px;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.5)
+    ), url(/images/graduation.jpg) no-repeat fixed center;
+    background-size: cover;
+    height: 500px;
+}
+
+
+/* ------------- CONTENT SECTIONS -------------- */
+.content {
+    padding-top: 15px;
+}
+
+.section-green {
+    background-color: #006940;
+    padding: 125px 0px;
+    color: #fff;
+    text-align: center;
+}
+
+.section-yellow{
+    background-color: #FFBA49;
+    padding: 125px 0px;
+    color: #fff;
+    
+}
+
+.section-image{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.5)
+    ), url(/images/travel.jpg) no-repeat fixed center;
+    padding: 125px 0px;
+    color: #fff;
+    height:400px;
+}
+
+.section-image2{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.5)
+    ), url(/images/mason-campus.jpg) no-repeat fixed center;
+    padding: 125px 0px;
+    color: #fff;
+    background-size: cover;
+}
+
+.well {
+    background-color: #FFBA49;
+    border: none;
+    color: #065143;
+}
+
+
+/* BUTTONS */
+a.btn-primary, button.btn-primary {
+    color: #006940;
+    font-weight: 700;
+    background-color: #FEBE10;
+    border: 0;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.4);
+}
+
+.btn-primary:hover {
+    background-color: #129490;
+    color:#fff;
+}
+
+h1#home-head {
+    text-shadow: 3px 3px 5px rgba(0,0,0,.6);
+}
+
+.btn-default.apply {
+    background-color:#FFBA49;
+    color: #065143;
+    border: none;
+}
+
+.btn-default.apply:hover {
+    background-color:#129490;
+    color: #fff;
+    border: none;
+}
+
+/* FORMS */
+
+form {
+    background-color: #fff;
+    color: #065143;
+    padding: 20px 50px;
+    border-radius: 25px;
+    border: 5px solid #FFBA49;
+    margin: 20px 0px;
+}
+
+input.btn-default {
+    background-color:#FFBA49;
+    color: #065143;
+    border: none;
+}
+
+input.btn-default:hover {
+    background-color:#129490;
+    color: #fff;
+    border: none;
+}
+
+form#logoutForm {
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+#search-form {
+    background-color: transparent;
+    padding: 0px;
+}
+
+#search-form button {
+    background-color: #FFBA49;
+    border: none;
+    color:#065143;
+}
+
+#search-form button:hover{
+    background-color: #129490;
+    color: #fff;
+}
+
+/* TABLES */
+
+table {
+    background-color: #fff;
+    color: #065143;
+    border: 5px solid #FFBA49;
+}
+
+footer {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+.no-bg {
+    background-color: transparent;
+}

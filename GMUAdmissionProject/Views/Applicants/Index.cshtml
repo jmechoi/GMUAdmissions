@@ -1,0 +1,188 @@
+﻿@model IEnumerable<GMUAdmissionProject.DAL.Applicant>
+
+@{
+    ViewBag.Title = "Application Management";
+}
+
+
+<div class="container">
+<h2>Application Management</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+    @using (Html.BeginForm("Index", "Applicants", FormMethod.Get, new { @class = "navbar-form navbar-left", id = "search-form" }))
+    {
+        <div class="form-group">
+            @Html.TextBox("Search", null, new { @class = "form-control", @placeholder = "Search by SSN"})
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    }
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>Submission Date</th>
+        <!--<th>
+            @Html.DisplayNameFor(model => model.ssn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zipcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hsName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hsCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gradDate)
+        </th>-->
+        <th>
+            @Html.DisplayNameFor(model => model.gpa)
+        </th>
+        <!--<th>
+            @Html.DisplayNameFor(model => model.satMath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.satVerbal)
+        </th>-->
+        <th>SAT Score</th>
+        <!--<th>
+            @Html.DisplayNameFor(model => model.majors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.enrollSemester)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.enrollYear)
+        </th>-->
+        <th>Enrollment Date</th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdminDecision)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Convert.ToString(string.Format("{0:MM/dd/yyyy}", item.submissionDate))
+        </td>
+        <!--<td>
+            @Html.DisplayFor(modelItem => item.ssn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zipcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hsName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hsCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gradDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gpa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.satMath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.satVerbal)
+        </td>-->
+        <td>
+            @Html.DisplayFor(modelItem => item.gpa)
+        </td>
+        <td>
+            @(item.satMath + item.satVerbal)
+        </td>
+        <!--<td>
+            @Html.DisplayFor(modelItem => item.majors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>-->
+        <td>
+            @Html.DisplayFor(modelItem => item.enrollSemester)
+            @Html.DisplayFor(modelItem => item.enrollYear)
+        </td>
+        <!--<td>
+            @Html.DisplayFor(modelItem => item.enrollYear)
+        </td>-->
+        <td>
+            @Html.DisplayFor(modelItem => item.AdminDecision)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+    </div>
